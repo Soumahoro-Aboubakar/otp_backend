@@ -9,7 +9,8 @@ const { hash, compare } = pkg;
 
 
 dotenv.config();
-
+console.log('Email:', process.env.EMAIL);
+console.log('Password:', process.env.PASSWORD ? '****' : 'Not set');
 const authRoute = express.Router()
 const generateOTP = () => {
     const otp = Math.floor(100000 + Math.random() * 900000);
